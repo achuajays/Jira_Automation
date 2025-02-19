@@ -1,10 +1,11 @@
 from fastapi import FastAPI, Request
 import requests
+import os
 import json
 
 app = FastAPI()
 
-GOOGLE_CHAT_WEBHOOK_URL = 'YOUR_GOOGLE_CHAT_WEBHOOK_URL'
+GOOGLE_CHAT_WEBHOOK_URL = "https://chat.googleapis.com/v1/spaces/lTVpAsAAAAE/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=_e2aYAQsL3Rk06D6-qJ7EUkvg9FaTriTDQSkQP0cQzg"
 
 @app.post('/jira-webhook')
 async def jira_webhook(request: Request):
